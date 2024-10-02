@@ -1,0 +1,91 @@
+{% extends "__layout.html" %}
+
+{% block content %}
+    <br><br><br>
+    <p class="header text-center">MINEKOUR</p>
+
+    <br><br>
+    <div class="card text-center text-light mx-auto headerbubble">
+        <div class="card-body">
+          <h5 class="card-title textheader">Добро пожаловать на Minekour!</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Данный сайт посвящен паркуру в Minecraft (от версии 1.21).</h6>
+          <p class="card-text">Здесь вы можете найти информацию про паркур-механики, стратегии, настройки, гличи, а также найти карты для прохождения.</p>
+          <a href="/about" class="card-link">О Создателях</a>
+        </div>
+      </div>
+
+    <br><br>
+    <p class="text-center question">С чего начать?</p>
+
+    <div id="carouselExampleControls" class="carousel slide mx-auto" style="max-width: 900px;" data-bs-ride="carousel">
+      <div class="carousel-inner mx-auto" style="max-width: 900px;">
+        <div class="carousel-item active txter">
+          <div class="col">
+            <div class="card text-center bg-dark text-light mx-auto txter">
+              <img src="../static/jump.png" class="card-img-top" alt="vidy pruzhkov">
+              <div class="card-body">
+                <h5 class="card-title text-center textheader">Все о передвижении</h5>
+                <p class="card-text text-center">
+                  Здесь вы узнаете все о передвижении игрока в Minecraft.
+                </p>
+                <a href="/essentials" class="btn btn-primary textheader">Движение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col">
+            <div class="card text-center bg-dark text-light mx-auto txter">
+              <img src="../static/effects.png" class="card-img-top" alt="effecty">
+              <div class="card-body">
+                <h5 class="card-title text-center textheader">Накладываемые эффекты</h5>
+                <p class="card-text text-center">
+                  Для большего разнообразия в паркурке используются различные эффекты, которые можно наложить на игрока.
+                </p>
+                <a href="/effects" class="btn btn-primary textheader">Смотреть список эффектов</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col">
+            <div class="card text-center bg-dark text-light mx-auto txter">
+              <img src="../static/blocks.png" class="card-img-top" alt="effecty">
+              <div class="card-body">
+                <h5 class="card-title text-center textheader">Виды блоков</h5>
+                <p class="card-text text-center">
+                  Все о блоках и их эффектах.
+                </p>
+                <a href="/blocks" class="btn btn-primary textheader">Блоки</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col">
+            <div class="card text-center bg-dark text-light mx-auto txter">
+              <img src="../static/maps.png" class="card-img-top" alt="maps">
+              <div class="card-body">
+                <h5 class="card-title text-center textheader">Карты</h5>
+                <p class="card-text text-center">
+                  Здесь вы можете исследовать набор карт для паркура любого уровня сложности.
+                </p>
+                <a href="#" class="btn btn-primary textheader">Посмотреть карты</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <br><br>
+
+{% endblock %}

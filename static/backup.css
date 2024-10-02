@@ -1,0 +1,19 @@
+.sofadi-one-regular {
+  font-family: "Sofadi One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  text-align: center;
+}
+
+
+.active {
+    font-family: monospace;
+}
+
+body {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

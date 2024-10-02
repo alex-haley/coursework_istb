@@ -1,0 +1,31 @@
+{% extends "__layout.html" %}
+
+{% block content %}
+    <p class="pageheader text-center">Создатели сайта</p>
+
+    <br><br><br>
+
+    <div class="card mb-3 mx-auto" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../static/ALXABOUT.JPG" class="img-fluid rounded-start" alt="alx">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Алексей Савин</h5>
+              <p class="card-text">
+                Студент 2-ого курса института информационных технологий и анализа данных ИРНИТУ. Данный сайт создавался как курсовая работа по курсу Web-программирования.
+              </p>
+              <p class="card-text">
+                <small class="text-muted" style="position: absolute; bottom: 10px;">
+                Разработчик и дизайнер сайта
+                </small>
+              </p>
+              <a class="gitpic" href="https://github.com/keymoki">
+                <img src="../static/25231.png" width="30" height="30">
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

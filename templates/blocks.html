@@ -1,0 +1,118 @@
+{% extends "__layout.html" %}
+
+{% block content %}
+
+<div class="flexcontainer">
+    <div class="flexitem sidemenu">
+        <div class="card text-center text-light mx-auto linkcard">
+            <div class="card-body">
+              <h5 class="card-title textheader text-black">Перейти</h5>
+              <h6 class="card-subtitle mb-2 text-muted">-------------</h6>
+              <div id="list-example" class="list-group">
+                <a class="list-group-item list-group-item-action txter" href="#simpleblock">Простые блоки</a>
+                <a class="list-group-item list-group-item-action txter" href="#sprinting">Бег</a>
+                <a class="list-group-item list-group-item-action txter" href="#sneaking">Подкрадывание</a>
+                <a class="list-group-item list-group-item-action txter" href="#jumping">Прыжок</a>
+                <a class="list-group-item list-group-item-action txter" href="#jumpclass">Виды прыжков</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="flexitemcenter" tabindex="0">
+        <br><br><br>
+        <p class="pageheader">
+            Блоки
+        </p>
+        <hr>
+        <br>
+        <p class="txter">
+            Блок - это основная структурная единица, занимающая пространство в мире.
+        </p>
+        <p class="txter">
+            Блок с коллизией - это сплошной объем пространства, через который игрок не должен проходить, который состоит из одной или нескольких ограничивающих рамок, которые представляют собой выровненные по оси кубоиды. Объекты имеют свои собственные ограничивающие рамки, но не рассматриваются как сплошное пространство (за исключением лодок).
+        </p>
+        <p class="txter">
+            Не путать с <span class="txterhighlight">хитбоксом</span>, который представляет собой объем пространства, с которым игрок может взаимодействовать (атаковать, ломать, интерактировать с помощью правой кнопкой мыши...).
+            Например: у кнопки нет поля для столкновений, так как игрок может пройти через него, но есть поле для попаданий, на которое игрок может нажать.
+            Другой пример: блок барьера имеет перекрывающиеся ограничивающую рамку и хитбокс, но жестко запрограммирован на отсутствие модели.
+        </p>
+        <p class="txter">
+            В этой статье перечислены поля столкновений и свойства всех блоков в версии 1.21.
+        </p>
+        <p class="txter">
+            Блоки с определенными свойствами и/или без полей столкновений представлены в отдельных статьях.
+        </p>
+        <p class="txter">
+            Изображения были взяты из <a href="https://www.blockbench.net/">Blockbench</a> или из <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki">Minecraft wiki</a>.
+        </p>
+        <br>
+        <p id="simpleblock" class="textheader">
+            Простые блоки
+        </p>
+        <hr>
+        <p class="txter">
+            Блоки столкновений, которые состоят из одной ограничивающей рамки. Блоки упорядочены по длине, затем по ширине, затем по высоте.
+        </p>
+        <br>
+        <table class="tabc mx-auto">
+            <tr>
+                <td>Блок</td>
+                <td>Размер (в блоках)</td>
+                <td>Высота</td>
+                <td>Доп информция</td>
+                <td>Модель</td>
+            </tr>
+            <tr>
+                <td>Стена (4х сторонняя)</td>
+                <td>1 x 1</td>
+                <td>1.5</td>
+                <td>
+                    Соседние блоки должны быть сплошными, иметь стены или ворота в заборе.
+                </td>
+                <td>
+                    <img src="../static/Wall_4-sided.png" width="150" height="200">
+                </td>
+            </tr>
+            <tr>
+                <td>Обычный блок</td>
+                <td>1 x 1</td>
+                <td>1</td>
+                <td></td>
+                <td>
+                    <img src="../static/Block_default.png" width="140" height="150">
+                </td>
+            </tr>
+            <tr>
+                <td>Песок душ</td>
+                <td>1 x 1</td>
+                <td>0.875</td>
+                <td>
+                    Выглядит как обычный блок, но он на 2 пикселя ниже. Замедляет находящихся на нем мобов.
+                </td>
+                <td>
+                    <img src="../static/Soulsand.png" width="140" height="150">
+                </td>
+            </tr>
+            <tr>
+                <td>Блок эндер-портала</td>
+                <td>1 x 1</td>
+                <td>0.8125</td>
+                <td></td>
+                <td>
+                    <img src="../static/End_Portal_Frame.png" width="140" height="150">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="flexitem sidemenu">
+        <div class="list-group text-center goback">
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 txter">К началу страницы</h5>
+              </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
