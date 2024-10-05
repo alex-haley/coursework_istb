@@ -1,19 +1,40 @@
 <nav class="navbar navbar-expand-lg bg-light fixed-top">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        {% for item in nav %}
-          <li class="nav-item navbarfont">
-            <a class="nav-link {% if item.title == name %}active{% endif %}" aria-current="page" href="{{ item.URL }}">{{ item.title }}</a>
-          </li>
-        {% endfor %}
-        <button type="button" class="btn btn-secondary aboutbutton" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="Дата последнего редактирования: 09:44 02.10.2024">
-          ?
+    <div class="container-fluid">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
         </button>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                {% for item in nav %}
+                <li class="nav-item navbarfont">
+                    <a
+                        class="nav-link {% if item.title == name %}active{% endif %}"
+                        aria-current="page"
+                        href="{{ item.URL }}"
+                        >{{ item.title }}</a
+                    >
+                </li>
+                {% endfor %}
+                <button
+                    type="button"
+                    class="btn btn-secondary aboutbutton"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-trigger="hover focus"
+                    data-bs-placement="left"
+                    data-bs-content="Дата последнего редактирования: 07:53 04.10.2024"
+                >
+                    ?
+                </button>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
