@@ -1,89 +1,89 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .poppinscentr {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px; 
-  text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
 }
 
 .poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: Pixeled;
-  src: url(Pixeled.ttf);
+    font-family: Pixeled;
+    src: url(Pixeled.ttf);
 }
 
 @font-face {
-  font-family: platinum_sign;
-  src: url(platinum_sign.ttf);
+    font-family: platinum_sign;
+    src: url(platinum_sign.ttf);
 }
 
 .header {
-  font-family: platinum_sign;
-  font-size: 48px;
+    font-family: platinum_sign;
+    font-size: 48px;
 }
 
 .pageheader {
-  font-family: Pixeled;
-  font-size: 24px;
+    font-family: Pixeled;
+    font-size: 24px;
 }
 
 .textheader {
-  font-family: Pixeled;
-  font-size: 16px;
+    font-family: Pixeled;
+    font-size: 16px;
 }
 
 .txter {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 500;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .txterhighlight {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 800;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 800;
 }
 
 .question {
-  font-family: Pixeled;
-  font-size: 12px;
+    font-family: Pixeled;
+    font-size: 12px;
 }
 
 .navbarfont {
-  font-family: Pixeled;
-  font-size: 10px;
+    font-family: Pixeled;
+    font-size: 10px;
 }
 
 .headerbubble {
-  width: 50rem;
-  background-color: rgb(52, 52, 52);
+    width: 50rem;
+    background-color: rgb(52, 52, 52);
 }
-  
+
 .active {
     font-family: Pixeled;
     font-size: 12px;
@@ -91,110 +91,113 @@
 }
 
 .bottomLine {
-  position: relative;
-  bottom: 5px;
-  right: 5px;
-  font-family: monospace;
-  font-size: 12px;
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    font-family: monospace;
+    font-size: 12px;
 }
 
 .flexcontainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .flexinnercontainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
-  align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: stretch;
 }
 
 .flexitem {
-  flex-grow: 0;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+    flex-grow: 0;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .flexitemcenter {
-  flex-grow: 1;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+    flex-grow: 1;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .flexiteminntxt {
-  flex-grow: 0;
-  padding: 5px;
-  width: 500px;
-  height: 150px;
-  margin-top: 10px;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+    flex-grow: 0;
+    padding: 5px;
+    width: 500px;
+    height: 150px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .context {
-  font-size: 14px;
-  text-align: left;
+    font-size: 14px;
+    text-align: left;
 }
 
 .tabc {
-  text-align: center;
+    text-align: center;
 }
 
 .aboutbutton {
-  position: absolute;
-  right: 5px;
-  top: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 .linkcard {
-  position:fixed;
-  width: 165px;
+    position: fixed;
+    width: 165px;
 }
 
 .goback {
-  position: fixed;
+    position: fixed;
 }
 
 .sidemenu {
-  position: relative;
-  top: 50px;
+    position: relative;
+    top: 50px;
 }
 
 .gitpic {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
 
 body {
-//background-color: rgb(33, 33, 33);
+    //background-color: rgb(33, 33, 33);
     background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }
+}
 
-table  , td, th {
-  border: 3px solid gray;
-  background-color: gainsboro;
-  font-size: 14px;
-  font-family: monospace;
+table,
+td,
+th {
+    border: 3px solid gray;
+    border-radius: 3px;
+    background-color: gainsboro;
+    font-size: 14px;
+    font-family: monospace;
 }
 
 :target {
-  background-color: orange;
+    background-color: orange;
 }

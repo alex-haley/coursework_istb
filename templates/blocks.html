@@ -81,279 +81,301 @@
             Блоки упорядочены по длине, затем по ширине, затем по высоте.
         </p>
         <br />
-        <table class="tabc txter mx-auto">
-            <tr>
-                <td>Блок</td>
-                <td>Размер (в блоках)</td>
-                <td>Высота</td>
-                <td>Доп информция</td>
-                <td>Модель</td>
-            </tr>
-            <tr>
-                <td>Стена (4х сторонняя)</td>
-                <td>1 x 1</td>
-                <td>1.5</td>
-                <td>
-                    Соседние блоки должны быть сплошными, иметь стены или ворота
-                    в заборе.
-                </td>
-                <td>
-                    <img
-                        src="../static/Wall_4-sided.png"
-                        width="120"
-                        height="170"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Обычный блок</td>
-                <td>1 x 1</td>
-                <td>1</td>
-                <td></td>
-                <td>
-                    <img
-                        src="../static/Block_default.png"
-                        width="130"
-                        height="140"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Песок душ</td>
-                <td>1 x 1</td>
-                <td>0.875</td>
-                <td>
-                    Выглядит как обычный блок, но он на 2 пикселя ниже.
-                    Замедляет находящихся на нем мобов.
-                </td>
-                <td>
-                    <img
-                        src="../static/Soulsand.png"
-                        width="130"
-                        height="140"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Блок эндер-портала</td>
-                <td>1 x 1</td>
-                <td>0.8125</td>
-                <td></td>
-                <td>
-                    <img
-                        src="../static/End_Portal_Frame.png"
-                        width="130"
-                        height="140"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Стол улучшения</td>
-                <td>1 x 1</td>
-                <td>0.75</td>
-                <td></td>
-                <td>
-                    <img
-                        src="../static/Enchantment_Table.png"
-                        width="130"
-                        height="140"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Блок кровати</td>
-                <td>1 x 1</td>
-                <td>0.5625</td>
-                <td>
-                    Нижняя часть не выглядит осязаемой, но на самом деле она
-                    осязаема.
-                </td>
-                <td>
-                    <img src="../static/Bed.png" width="150" height="130" />
-                </td>
-            </tr>
-            <tr>
-                <td>Плита</td>
-                <td>1 x 1</td>
-                <td>0.5</td>
-                <td>
-                    Можно поставить как верхнюю часть целого блока, или как
-                    нижнюю часть целого блока.
-                </td>
-                <td>
-                    <img
-                        src="../static/Block_Slab.png"
-                        width="150"
-                        height="130"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Датчик дневного света</td>
-                <td>1 x 1</td>
-                <td>0.375</td>
-                <td></td>
-                <td>
-                    <img
-                        src="../static/Daylight_Sensor.png"
-                        width="150"
-                        height="130"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Люк (закрытый)</td>
-                <td>1 x 1</td>
-                <td>0.1875</td>
-                <td>
-                    Можно изменить его положение на открытое. Также можно
-                    поставить его как верхнюю часть целого блока, либо как
-                    нижнюю.
-                </td>
-                <td>
-                    <img
-                        src="../static/Trapdoor.png"
-                        width="150"
-                        height="105"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Повторитель</td>
-                <td>1 x 1</td>
-                <td>0.125</td>
-                <td></td>
-                <td>
-                    <img
-                        src="../static/Repeater.png"
-                        width="170"
-                        height="125"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Ковер</td>
-                <td>1 x 1</td>
-                <td>0.0625</td>
-                <td></td>
-                <td>
-                    <img src="../static/Carpet.png" width="170" height="110" />
-                </td>
-            </tr>
-            <tr>
-                <td>Кувшинка</td>
-                <td>1 x 1</td>
-                <td>0.015625</td>
-                <td>Толщина кувшинки - 1/4 пикселя.</td>
-                <td>
-                    <img
-                        src="../static/Lily_Pad.png"
-                        width="170"
-                        height="110"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Слой снега</td>
-                <td>1 x 1</td>
-                <td>0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875</td>
-                <td>
-                    Снег выглядит на 2 пикселя выше чем его настоящая высота. Не
-                    смотря на то, что при состоянии 0 у блока нет высоты, его
-                    все равно видно
-                </td>
-                <td>
-                    <img src="../static/Snow.gif" width="130" height="150" />
-                </td>
-            </tr>
-            <tr>
-                <td>Стена (3х сторонняя)</td>
-                <td>1 x 0.75</td>
-                <td>1.5</td>
-                <td>
-                    Можно вращать (имеет 4 разных варианта). Соседние блоки
-                    должны быть сплошными, иметь стены или ворота в заборе.
-                </td>
-                <td>
-                    <img
-                        src="../static/Wall_3-sided.png"
-                        width="120"
-                        height="170"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Наковальня</td>
-                <td>1 x 0.75</td>
-                <td>1</td>
-                <td>Можно вращать. Выглядит меньше чем есть на самом деле.</td>
-                <td>
-                    <img src="../static/Anvil.png" width="130" height="150" />
-                </td>
-            </tr>
-            <tr>
-                <td>Основа поршня</td>
-                <td>1 × 0.75</td>
-                <td>1</td>
-                <td>Можно вращать.</td>
-                <td>
-                    <img
-                        src="../static/Piston_Base_Powered.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Стена (2х сторонняя)</td>
-                <td>1 x 0.375</td>
-                <td>1.5</td>
-                <td>
-                    Сосредоточена по центру блока. Можно вращать. Соседние блоки
-                    должны быть сплошными, иметь стены или ворота забора.
-                    Размещение блока поверх него не приводит к изменению его
-                    поля столкновения, несмотря на то, что внешне он был другим.
-                </td>
-                <td>
-                    <img
-                        src="../static/Wall_2-opposite.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Забор (2х сторонний)</td>
-                <td>1 x 0.25</td>
-                <td>1.5</td>
-                <td>
-                    Сосредоточен по центру блока. Можно вращать. Соседние блоки
-                    должны быть сплошными, иметь стены или ворота забора.
-                </td>
-                <td>
-                    <img
-                        src="../static/Fence_2-opposite.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Ворота</td>
-                <td>1 x 0.25</td>
-                <td>1.5</td>
-                <td>
-                    Сосредоточены по центру блока. Можно вращать. Можно
-                    переключить на вариант без колизии.
-                </td>
-                <td>
-                    <img
-                        src="../static/Fencegate.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
+        <table
+            class="tabc txter mx-auto table table-striped table-active table-bordered"
+        >
+            <thead>
+                <tr>
+                    <td>Блок</td>
+                    <td>Размер (в блоках)</td>
+                    <td>Высота</td>
+                    <td>Доп информция</td>
+                    <td>Модель</td>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <td>Стена (4х сторонняя)</td>
+                    <td>1 x 1</td>
+                    <td>1.5</td>
+                    <td>
+                        Соседние блоки должны быть сплошными, иметь стены или
+                        ворота в заборе.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Wall_4-sided.png"
+                            width="120"
+                            height="170"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Обычный блок</td>
+                    <td>1 x 1</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>
+                        <img
+                            src="../static/Block_default.png"
+                            width="130"
+                            height="140"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Песок душ</td>
+                    <td>1 x 1</td>
+                    <td>0.875</td>
+                    <td>
+                        Выглядит как обычный блок, но он на 2 пикселя ниже.
+                        Замедляет находящихся на нем мобов.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Soulsand.png"
+                            width="130"
+                            height="140"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Блок эндер-портала</td>
+                    <td>1 x 1</td>
+                    <td>0.8125</td>
+                    <td></td>
+                    <td>
+                        <img
+                            src="../static/End_Portal_Frame.png"
+                            width="130"
+                            height="140"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Стол улучшения</td>
+                    <td>1 x 1</td>
+                    <td>0.75</td>
+                    <td></td>
+                    <td>
+                        <img
+                            src="../static/Enchantment_Table.png"
+                            width="130"
+                            height="140"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Блок кровати</td>
+                    <td>1 x 1</td>
+                    <td>0.5625</td>
+                    <td>
+                        Нижняя часть не выглядит осязаемой, но на самом деле она
+                        осязаема.
+                    </td>
+                    <td>
+                        <img src="../static/Bed.png" width="150" height="130" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Плита</td>
+                    <td>1 x 1</td>
+                    <td>0.5</td>
+                    <td>
+                        Можно поставить как верхнюю часть целого блока, или как
+                        нижнюю часть целого блока.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Block_Slab.png"
+                            width="150"
+                            height="130"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Датчик дневного света</td>
+                    <td>1 x 1</td>
+                    <td>0.375</td>
+                    <td></td>
+                    <td>
+                        <img
+                            src="../static/Daylight_Sensor.png"
+                            width="150"
+                            height="130"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Люк (закрытый)</td>
+                    <td>1 x 1</td>
+                    <td>0.1875</td>
+                    <td>
+                        Можно изменить его положение на открытое. Также можно
+                        поставить его как верхнюю часть целого блока, либо как
+                        нижнюю.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Trapdoor.png"
+                            width="150"
+                            height="105"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Повторитель</td>
+                    <td>1 x 1</td>
+                    <td>0.125</td>
+                    <td></td>
+                    <td>
+                        <img
+                            src="../static/Repeater.png"
+                            width="170"
+                            height="125"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ковер</td>
+                    <td>1 x 1</td>
+                    <td>0.0625</td>
+                    <td></td>
+                    <td>
+                        <img
+                            src="../static/Carpet.png"
+                            width="170"
+                            height="110"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Кувшинка</td>
+                    <td>1 x 1</td>
+                    <td>0.015625</td>
+                    <td>Толщина кувшинки - 1/4 пикселя.</td>
+                    <td>
+                        <img
+                            src="../static/Lily_Pad.png"
+                            width="170"
+                            height="110"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Слой снега</td>
+                    <td>1 x 1</td>
+                    <td>0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875</td>
+                    <td>
+                        Снег выглядит на 2 пикселя выше чем его настоящая
+                        высота. Не смотря на то, что при состоянии 0 у блока нет
+                        высоты, его все равно видно
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Snow.gif"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Стена (3х сторонняя)</td>
+                    <td>1 x 0.75</td>
+                    <td>1.5</td>
+                    <td>
+                        Можно вращать (имеет 4 разных варианта). Соседние блоки
+                        должны быть сплошными, иметь стены или ворота в заборе.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Wall_3-sided.png"
+                            width="120"
+                            height="170"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Наковальня</td>
+                    <td>1 x 0.75</td>
+                    <td>1</td>
+                    <td>
+                        Можно вращать. Выглядит меньше чем есть на самом деле.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Anvil.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Основа поршня</td>
+                    <td>1 × 0.75</td>
+                    <td>1</td>
+                    <td>Можно вращать.</td>
+                    <td>
+                        <img
+                            src="../static/Piston_Base_Powered.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Стена (2х сторонняя)</td>
+                    <td>1 x 0.375</td>
+                    <td>1.5</td>
+                    <td>
+                        Сосредоточена по центру блока. Можно вращать. Соседние
+                        блоки должны быть сплошными, иметь стены или ворота
+                        забора. Размещение блока поверх него не приводит к
+                        изменению его поля столкновения, несмотря на то, что
+                        внешне он был другим.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Wall_2-opposite.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Забор (2х сторонний)</td>
+                    <td>1 x 0.25</td>
+                    <td>1.5</td>
+                    <td>
+                        Сосредоточен по центру блока. Можно вращать. Соседние
+                        блоки должны быть сплошными, иметь стены или ворота
+                        забора.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Fence_2-opposite.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ворота</td>
+                    <td>1 x 0.25</td>
+                    <td>1.5</td>
+                    <td>
+                        Сосредоточены по центру блока. Можно вращать. Можно
+                        переключить на вариант без колизии.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Fencegate.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <br /><br />
         <p id="composite" class="textheader">Составные блоки</p>
@@ -365,103 +387,123 @@
             рамок).
         </p>
         <br />
-        <table class="tabc txter mx-auto">
-            <tr>
-                <td>Блок</td>
-                <td>Размер (В блоках)</td>
-                <td>Высота</td>
-                <td>Доп информация</td>
-                <td>Модель</td>
-            </tr>
-            <tr>
-                <td>Лестница (обычная)</td>
-                <td>Основа: 1 x 1; Верхняя часть: 1 x 0.5</td>
-                <td>Основа: 0.5; Верхняя часть: 1</td>
-                <td>Можно вращать.</td>
-                <td>
-                    <img
-                        src="../static/Block_Stair_default.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Лестница (внешняя)</td>
-                <td>Основа: 1 x 1; Верхняя часть: 0.5 x 0.5</td>
-                <td>Основа: 0.5; Верхняя часть: 1</td>
-                <td>Можно вращать. Зависит от соседних блоков лестницы.</td>
-                <td>
-                    <img
-                        src="../static/Stair_outer.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Лестница (внутренняя)</td>
-                <td>Основа: 1 x 1; За исключением: -0.5 x -0.5</td>
-                <td>Основа: 1; За исключением: -0.5</td>
-                <td>Можно вращать. Зависит от соседних блоков лестницы.</td>
-                <td>
-                    <img
-                        src="../static/Stair_inner.png"
-                        width="130"
-                        height="150"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Рамка эндер-портала (с глазом внутри)</td>
-                <td>Основа: 1 x 1; Глаз: 0.375 x 0.375</td>
-                <td>Основа: 0.8125; Глаз: 1</td>
-                <td>
-                    Глаз выглядит больше, чем есть на самом деле (выглядит на
-                    8px, на самом деле 6px).
-                </td>
-                <td>
-                    <img
-                        src="../static/End_Portal_Frame_Eye.png"
-                        width="130"
-                        height="140"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td>Воронка</td>
-                <td>Основа: 1 x 1; За исключением: -0.75 x -0.75</td>
-                <td>Основа: 1; За исключением: -0.375</td>
-                <td>
-                    Дно не выглядит осязаемым, но таковым является. Дно на 1px
-                    ниже, чем кажется.
-                </td>
-                <td>
-                    <img src="../static/Hopper.png" width="140" height="130" />
-                </td>
-            </tr>
+        <table
+            class="tabc txter mx-auto table table-striped table-active table-bordered"
+        >
+            <thead>
+                <tr>
+                    <td>Блок</td>
+                    <td>Размер (В блоках)</td>
+                    <td>Высота</td>
+                    <td>Доп информация</td>
+                    <td>Модель</td>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <td>Лестница (обычная)</td>
+                    <td>Основа: 1 x 1; Верхняя часть: 1 x 0.5</td>
+                    <td>Основа: 0.5; Верхняя часть: 1</td>
+                    <td>Можно вращать.</td>
+                    <td>
+                        <img
+                            src="../static/Block_Stair_default.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Лестница (внешняя)</td>
+                    <td>Основа: 1 x 1; Верхняя часть: 0.5 x 0.5</td>
+                    <td>Основа: 0.5; Верхняя часть: 1</td>
+                    <td>Можно вращать. Зависит от соседних блоков лестницы.</td>
+                    <td>
+                        <img
+                            src="../static/Stair_outer.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Лестница (внутренняя)</td>
+                    <td>Основа: 1 x 1; За исключением: -0.5 x -0.5</td>
+                    <td>Основа: 1; За исключением: -0.5</td>
+                    <td>Можно вращать. Зависит от соседних блоков лестницы.</td>
+                    <td>
+                        <img
+                            src="../static/Stair_inner.png"
+                            width="130"
+                            height="150"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Рамка эндер-портала (с глазом внутри)</td>
+                    <td>Основа: 1 x 1; Глаз: 0.375 x 0.375</td>
+                    <td>Основа: 0.8125; Глаз: 1</td>
+                    <td>
+                        Глаз выглядит больше, чем есть на самом деле (выглядит
+                        на 8px, на самом деле 6px).
+                    </td>
+                    <td>
+                        <img
+                            src="../static/End_Portal_Frame_Eye.png"
+                            width="130"
+                            height="140"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Воронка</td>
+                    <td>Основа: 1 x 1; За исключением: -0.75 x -0.75</td>
+                    <td>Основа: 1; За исключением: -0.375</td>
+                    <td>
+                        Дно не выглядит осязаемым, но таковым является. Дно на
+                        1px ниже, чем кажется.
+                    </td>
+                    <td>
+                        <img
+                            src="../static/Hopper.png"
+                            width="140"
+                            height="130"
+                        />
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <br /><br />
         <p id="other" class="textheader">Другие</p>
         <hr />
         <br />
-        <table class="txter tabc">
-            <tr>
-                <td>Блок</td>
-                <td>Размер (В блоках)</td>
-                <td>Высота</td>
-                <td>Доп информация</td>
-                <td>Модель</td>
-            </tr>
-            <tr>
-                <td>Лодка</td>
-                <td>1.5 x 1.5</td>
-                <td>0.6</td>
-                <td>Сущность.</td>
-                <td>
-                    <img src="../static/Boat.png" width="150" height="140" />
-                </td>
-            </tr>
+        <table
+            class="txter tabc mx-auto table table-striped table-active table-bordered"
+        >
+            <thead>
+                <tr>
+                    <td>Блок</td>
+                    <td>Размер (В блоках)</td>
+                    <td>Высота</td>
+                    <td>Доп информация</td>
+                    <td>Модель</td>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <td>Лодка</td>
+                    <td>1.5 x 1.5</td>
+                    <td>0.6</td>
+                    <td>Сущность.</td>
+                    <td>
+                        <img
+                            src="../static/Boat.png"
+                            width="150"
+                            height="140"
+                        />
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <br /><br />
     </div>

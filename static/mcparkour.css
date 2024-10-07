@@ -9463,8 +9463,11 @@ body {
   background-attachment: fixed;
   background-size: cover; }
 
-table, td, th {
+table,
+td,
+th {
   border: 3px solid gray;
+  border-radius: 3px;
   background-color: gainsboro;
   font-size: 14px;
   font-family: monospace; }

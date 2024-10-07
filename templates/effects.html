@@ -1,5 +1,337 @@
-{% extends "__layout.html" %}
+{% extends "__layout.html" %} {% block content %}
 
-{% block content %}
+<div class="flexcontainer">
+    <div class="flexitem sidemenu">
+        <div class="card text-center text-light mx-auto linkcard">
+            <div class="card-body">
+                <h5 class="card-title textheader text-black">Перейти</h5>
+                <h6 class="card-subtitle mb-2 text-muted">-------------</h6>
+                <div id="list-example" class="list-group">
+                    <a
+                        class="list-group-item list-group-item-action txter"
+                        href="#behavior"
+                        >Поведение</a
+                    >
+                    <a
+                        class="list-group-item list-group-item-action txter"
+                        href="#speed"
+                        >Скорость</a
+                    >
+                    <a
+                        class="list-group-item list-group-item-action txter"
+                        href="#slowness"
+                        >Медлительность</a
+                    >
+                    <a
+                        class="list-group-item list-group-item-action txter"
+                        href="#interaction"
+                        >Взаимодействие С и М</a
+                    >
+                    <a
+                        class="list-group-item list-group-item-action txter"
+                        href="#jboost"
+                        >Усиление прыжка</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        data-bs-spy="scroll"
+        data-bs-target="#list-example"
+        data-bs-smooth-scroll="true"
+        class="flexitemcenter"
+        tabindex="0"
+    >
+        <br /><br /><br />
+        <p class="pageheader">Эффекты</p>
+        <hr />
+        <br />
+        <div class="clearfix">
+          <img src="../static/Status_Effects.webp" class="col-md-4 float-md-end mb-3 ms-md-3" alt="three main effects for parkour in minecarft">
+
+          <p class="txter">
+              Эффект - это полезное или вредное состояние, которое влияет на объект.
+              Эффекты могут быть вызваны различными способами на протяжении всей игры,
+              включая употребление зелий и некоторых продуктов питания, нахождение в зоне
+              действия маяков и каналов, а также нападение определенных мобов или близость к ним.
+          </p>
+
+          <p class="txter">
+              Эффекты состояния могут быть применены к большинству зелий,
+              некоторым эффектам маяка или с помощью команды /effect.
+          </p>
+
+          <p class="txter">
+              Команда эффекта: <span class="txterhighlight">/effect <игрок> <эффект> <Длительность>
+              <Уровень-1></>.
+          </p>
+
+          <p class="txter">
+              В Java Edition play может использовать <span class="txterhighlight">/effect give <цели> <эффект> infinite</span>, чтобы эффект длился бесконечно.
+          </p>
+        </div>
+        <br>
+
+        <p id="behavior" class="textheader">Поведение</p>
+        <hr>
+        <p class="txter">
+            На любые объекты эффект воздействует различными способами
+            в течение определенного периода времени. Во время действия эффекта частицы
+            в форме спирали вылетают из положения объекта, на который был нанесен эффект.
+            Для большинства эффектов более высокие уровни увеличивают силу эффекта.
+        </p>
+        <p class="txter">
+            В <span class="txterhighlight">Java Edition</span> игроки могут открыть свой инвентарь, чтобы увидеть все текущие эффекты,
+            которые на них распространяются, а также уровни и продолжительность каждого из них.
+        </p>
+        <p class="txter">
+            Внутренне, в команде /effect и в тегах NBT potion Amplifier, игра сохраняет
+            значение "amplifier", которое на единицу меньше отображаемого уровня. Например,
+            для Strength II значение усилителя равно 1.
+        </p>
+        <p class="txter">
+            Из-за способа хранения этого усилителя в NBT, усилители от 128 до 255
+            (уровни от 129 до 256) в тегах NBT (например, в potions) обрабатываются так,
+            как если бы они были от -128 до -1 (уровни от -127 до 0) соответственно.‌
+            [Только для Java Edition] Команда /effect изначально применяет такие усилители
+            в их положительном значении, но позже это преобразуется в отрицательную интерпретацию,
+            что приводит к противоречивым результатам.
+        </p>
+        <p class="txter">
+            На игроке может быть одновременно задействовано любое количество различных эффектов,
+            включая противоположные, такие как Сила и слабость. Однако невозможно применить один
+            и тот же эффект несколько раз, даже если они имеют разные уровни (например, Сила и
+            Ослабление II). При применении эффекта, который уже активен на игроке, более высокие
+            уровни заменяют более низкие уровни, а более высокая продолжительность заменяет более
+            низкую продолжительность того же уровня.
+        </p>
+        <p class="txter">
+            В Java Edition, когда эффект stronger перекрывает эффект weaker, эффект weaker остается,
+            но скрыт. Он возвращается после истечения срока действия эффекта stronger, если эффект
+            weaker имеет большую продолжительность, чем эффект stronger. Это изменение делает
+            невозможным создание пользовательских противоядий от зелий путем применения усиленного
+            эффекта продолжительностью в один такт.
+        </p>
+        <br>
+        <p id="speed" class="textheader">Скорость</p>
+        <hr>
+        <p class="txter">
+            Эффект <span class="txterhighlight">Скорость</span> увеличивает наземную скорость игрока, заставляя его двигаться на 20% быстрее
+            в зависимости от уровня скорости.
+        </p>
+        <p class="txter">
+            Скорость не влияет на движение в воздухе, поэтому спринтерские прыжки становятся
+            менее эффективными, чем выше уровень скорости (для скорости II спринтерские прыжки,
+            как правило, медленнее, чем просто бег).
+        </p>
+        <br>
+        <table class="txter tabc mx-auto table table-striped table-active table-bordered">
+            <thead>
+            <tr>
+                <td>Уровень скорости</td>
+                <td>Максимальная скорость ходьбы(м/т)</td>
+                <td>Максимальная скорость бега(м/т)</td>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            <tr>
+                <td>Нет эффекта</td>
+                <td>0.215</td>
+                <td>0.280</td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td>0.259</td>
+                <td>0.336</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>0.302</td>
+                <td>0.392</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>0.345</td>
+                <td>0.448</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>0.388</td>
+                <td>0.505</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <p class="txter">
+            Скорость указана в метрах за такт (м/т). Чтобы получить скорость в м/с, просто умножьте ее на 20.
+        </p>
+        <p class="txter">
+            Чтобы получить максимальную скорость движения по земле с углом наклона 45°, разделите ее на 0,98.
+        </p>
+        <br>
+        <p id="slowness" class="textheader">Медлительность</p>
+        <hr>
+        <p class="txter">
+            Эффект <span class="txterhighlight">Медлительность</span> замедляет наземную скорость игрока, заставляя его двигаться на 15% медленнее в зависимости от уровня замедления.
+        </p>
+        <p class="txter">
+            Медлительность не влияет на движение в воздухе, поэтому спринтерские прыжки более эффективны.
+        </p>
+        <br>
+        <table class="txter tabc mx-auto table table-striped table-active table-bordered">
+            <thead>
+            <tr>
+                <td>Уровень медлительности</td>
+                <td>Максимальная скорость ходьбы(м/т)</td>
+                <td>Максимальная скорость бега(м/т)</td>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            <tr>
+                <td>Нет эффекта</td>
+                <td>0.215</td>
+                <td>0.280</td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td>0.183</td>
+                <td>0.238</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>0.151</td>
+                <td>0.196</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>0.118</td>
+                <td>0.154</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>0.086</td>
+                <td>0.112</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>0.053</td>
+                <td>0.070</td>
+            </tr>
+            <tr>
+                <td>VI</td>
+                <td>0.021</td>
+                <td>0.028</td>
+            </tr>
+            <tr>
+                <td>VII</td>
+                <td>0.00</td>
+                <td>0.00</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <p class="txter">
+            Скорость указана в метрах за такт (м/т). Чтобы получить скорость в м/с, просто умножьте ее на 20.
+        </p>
+        <p class="txter">
+            Чтобы получить максимальную скорость движения по земле с углом наклона 45°, разделите ее на 0,98.
+        </p>
+        <p class="txter">
+            <span class="txterhighlight">Примечание</span>: после 7-го уровня (VII) медлительность полностью останавливает игрока на месте.
+        </p>
+        <br>
+        <p id="interaction" class="textheader">Взаимодействие скорости и медлительности</p>
+        <hr>
+        <p class="txter">
+            Множители скорости и медлительности не прибавляют, а скорее умножают.
+        </p>
+        <p class="txter">
+            Например, если у игрока скорость III (+60%) и медлительность IV (-60%),
+            результирующий эффект скорости составляет не +0%, как можно было бы ожидать, а -34%.
+        </p>
+        <br>
+        <p id="jboost" class="textheader">Усиление прыжка</p>
+        <hr>
+        <p class="txter">Прыжки по умолчанию устанавливают вертикальную скорость игрока на 0,42.</p>
+        <p class="txter">Эффект усиления прыжка увеличивает этот начальный вертикальный импульс на 0,1 за каждый уровень.</p>
+        <p class="txter">Вот список максимальной высоты, которой может достичь игрок при различных уровнях усиления.</p>
+        <br>
+        <table class="txter tabc mx-auto table table-striped table-active table-bordered">
+            <thead>
+            <tr>
+                <td>Уровень усиления прыжка</td>
+                <td>Максимальная высота прыжка</td>
+                <td>Длительность (t) на земле</td>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            <tr>
+                <td>Нет эффекта</td>
+                <td>1.249</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td>1.836</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>2.516</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>3.290</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>4.153</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>5.103</td>
+                <td>23</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <p class="txter"><span class="txterhighlight">Примечания:</span></p>
+        <ul class="txter">
+            <li>
+                В версии 1.9+ высота прыжка по умолчанию увеличена до 1,252 м,
+                но это не меняет высоту прыжка с ускорением прыжка в целом
+                (см. Формулы перемещения).
+            </li>
+            <li>
+                После 129-го уровня ускорение прыжка становится отрицательным,
+                из-за чего игрок не может прыгать (если только он не использует
+                отрицательную скорость для отскока от блока слизи).
+            </li>
+            <li>
+                На уровнях 252-256 игрок может прыгать снова, но с уменьшенной
+                высотой прыжка. На уровне 256 высота прыжка остается той же, что
+                и по умолчанию.
+            </li>
+        </ul>
+        <br><br>
+    </div>
+    <div class="flexitem sidemenu">
+        <div class="list-group text-center goback">
+            <a
+                href="#"
+                class="list-group-item list-group-item-action"
+                aria-current="true"
+            >
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 txter">К началу страницы</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
