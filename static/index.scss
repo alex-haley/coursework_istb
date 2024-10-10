@@ -171,13 +171,17 @@
 
 .sidemenu {
     position: relative;
-    top: 50px;
 }
 
 .gitpic {
     position: absolute;
     bottom: 5px;
     right: 5px;
+}
+
+.footer {
+    font-size: 10px;
+    color: white;
 }
 
 body {
@@ -198,6 +202,10 @@ th {
     font-family: monospace;
 }
 
+footer {
+    background-color: black;
+}
+
 :target {
-    background-color: orange;
+    background-color: $yellow-500;
 }

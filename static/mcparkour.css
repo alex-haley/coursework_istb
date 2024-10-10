@@ -9449,13 +9449,16 @@ textarea.form-control-lg {
   position: fixed; }
 
 .sidemenu {
-  position: relative;
-  top: 50px; }
+  position: relative; }
 
 .gitpic {
   position: absolute;
   bottom: 5px;
   right: 5px; }
+
+.footer {
+  font-size: 10px;
+  color: white; }
 
 body {
   background-color: white;
@@ -9472,7 +9475,10 @@ th {
   font-size: 14px;
   font-family: monospace; }
 
+footer {
+  background-color: black; }
+
 :target {
-  background-color: orange; }
+  background-color: #ffc107; }
 
 /*# sourceMappingURL=mcparkour.css.map */

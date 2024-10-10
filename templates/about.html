@@ -1,31 +1,56 @@
-{% extends "__layout.html" %}
+{% extends "__layout.html" %} {% block content %}
+<br />
+<p class="pageheader text-center">Создатели сайта</p>
 
-{% block content %}
-    <p class="pageheader text-center">Создатели сайта</p>
+<br /><br /><br />
 
-    <br><br><br>
-
-    <div class="card mb-3 mx-auto" style="max-width: 1000px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="../static/ALXABOUT.JPG" class="img-fluid rounded-start" alt="alx">
-          </div>
-          <div class="col-md-8">
+<div class="card mb-3 mx-auto" style="max-width: 769px">
+    <div class="row g-0">
+        <div class="col-md-15">
+            <img
+                src="../static/photo_2024-10-08_15-53-01.jpg"
+                class="img-fluid rounded-start"
+                alt="alx"
+            />
+        </div>
+        <div class="col-md-15">
             <div class="card-body">
-              <h5 class="card-title">Алексей Савин</h5>
-              <p class="card-text">
-                Студент 2-ого курса института информационных технологий и анализа данных ИРНИТУ. Данный сайт создавался как курсовая работа по курсу Web-программирования.
-              </p>
-              <p class="card-text">
-                <small class="text-muted" style="position: absolute; bottom: 10px;">
-                Разработчик и дизайнер сайта
-                </small>
-              </p>
-              <a class="gitpic" href="https://github.com/keymoki">
-                <img src="../static/25231.png" width="30" height="30">
-              </a>
+                <h5 class="card-title text-center">Алексей Савин</h5>
+                <p class="card-text text-center">
+                    На данный момент студент 2-ого курса института
+                    информационных технологий и анализа данных
+                    <a href="https://www.istu.edu/">ИРНИТУ</a>. Данный сайт
+                    создавался как курсовая работа по Web-технологиям. Люблю
+                    работать с электроникой, сетями и программировать
+                    низкоуровневые штуки. Пока больших проектов нет, но все
+                    впереди. Также придерживаюсь цифрового минимализма.
+                </p>
+                <p class="card-text text-center">
+                    <img
+                        src="../static/C_Programming_Language.png"
+                        width="27"
+                        height="30"
+                    />
+                    <img src="../static/cpp.svg" width="30" height="30" />
+                    <img src="../static/java.png" width="30" height="30" />
+                    <img src="../static/rust.png" width="30" height="30" />
+                    <img src="../static/linux.svg" width="50" height="50" />
+                </p>
+                <p class="card-text">
+                    <small
+                        class="text-muted"
+                        style="position: absolute; bottom: 10px"
+                    >
+                        Разработчик и дизайнер сайта
+                    </small>
+                </p>
+                <a class="gitpic" href="https://github.com/keymoki">
+                    <img src="../static/25231.png" width="30" height="30" />
+                </a>
             </div>
-          </div>
         </div>
     </div>
+</div>
+
+<br />
 {% endblock %}
